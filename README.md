@@ -41,12 +41,12 @@ Cada técnica se evaluó en términos de su impacto en la capacidad del modelo p
 
 ## 3. Evaluación y Resultados
 
-| Modelo | Accuracy | Recall | Precision | F1-score |
-|--------|---------|--------|-----------|---------|
-| Regresión Logística Base | 99.92% | 62.5% | 87.6% | 72.9% |
-| MCD | 99.86% | 80.88% | 80.3% | 80.58% |
-| Isolation Forest | 99.83% | 80.88% | 72.3% | 76.3% |
-| SMOTE + Logistic Regression | 99.85% | 87.5% | 76.9% | 81.8% |
+| Modelo | Accuracy | Recall | Precision | F1-score | Especificidad |
+|--------|---------|--------|-----------|---------|---------|
+| Regresión Logística Base | 99.92% | 62.5% | 87.6% | 72.9% | 99.9% |
+| MCD | 99.93% | 80.88% | 80.3% | 80.58% | 99.9% |
+| Isolation Forest | 99.83% | 80.88% | 72.3% | 76.3% | 00.0% |
+| SMOTE + Logistic Regression | 99.85% | 87.5% | 76.9% | 81.8% | 00.0% |
 
 **Análisis de resultados:**
 - **La Regresión Logística convencional es inadecuada** debido a su bajo recall (62.5%), lo que implica una alta tasa de fraudes no detectados.
