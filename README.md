@@ -31,7 +31,8 @@ Se compararon diferentes enfoques para abordar el problema:
    - **Isolation Forest**  
    - Enfoque centrado en identificar transacciones atípicas en los datos.
 
-3. **Estrategias de Balanceo de Clases**  
+3. **Estrategias de Balanceo de Clases** 
+   - **Cost-Sensitive Training:** Baja precisión, por ende muchas transacciones legítimas son clasificadas como fraude.   
    - **Undersampling:** Reducción de la clase mayoritaria.  
    - **Oversampling:** Aumento de la clase minoritaria.  
    - **SMOTE:** Generación de datos sintéticos para mejorar la representación de la clase fraudulenta.  
@@ -43,10 +44,13 @@ Cada técnica se evaluó en términos de su impacto en la capacidad del modelo p
 
 | Modelo | Accuracy | Recall | Precision | F1-score | Especificidad |
 |--------|---------|--------|-----------|---------|---------|
-| Regresión Logística Base | 99.92% | 62.5% | 87.6% | 72.9% | 99.9% |
+| Regresión Logística | 99.92% | 62.5% | 87.6% | 72.9% | 99.9% |
 | MCD | 99.93% | 80.88% | 80.3% | 80.58% | 99.9% |
-| Isolation Forest | 99.83% | 80.88% | 72.3% | 76.3% | 00.0% |
-| SMOTE + Logistic Regression | 99.85% | 87.5% | 76.9% | 81.8% | 00.0% |
+| Isolation Forest | 99.83% | 80.88% | 72.3% | 76.3% | 99.95% |
+| Cost-Sensitive | 97.42% | 92.64% | 5.43% | 10.27% | 97.43% |
+| Undersamplig | 96.07% | 93.38% | 3.66% | 7.04% | 96.08% |
+| Oversampling | 97.40% | 92.64% | 5.39% | 10.19% | 97.4% |
+| SMOTE  | 97.25% | 92.64% | 5.12% | 9.71% | 97.26% |
 
 **Análisis de resultados:**
 - **La Regresión Logística convencional es inadecuada** debido a su bajo recall (62.5%), lo que implica una alta tasa de fraudes no detectados.
