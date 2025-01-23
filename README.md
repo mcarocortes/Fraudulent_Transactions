@@ -69,6 +69,5 @@ Este proyecto se desarrolló en Python y requiere las siguientes bibliotecas:
 - pandas
 - numpy
 - scikit-learn
-- imbalanced-learn
 - matplotlib
 - seaborn
